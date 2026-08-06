@@ -19,8 +19,16 @@
 #' @note Requires the \pkg{riceidconverter} package.
 #'
 #' @examples
-#' \dontrun{
-#' msu_to_rap(c("LOC_Os01g01010", "LOC_Os01g01019"))
+#' msu_ids <- c("LOC_Os01g01010", "LOC_Os01g01019", "LOC_Os01g01040")
+#'
+#' if (requireNamespace("riceidconverter", quietly=TRUE)) {
+#'     ## MSU -> RAP-DB, input order preserved
+#'     rap_ids <- msu_to_rap(msu_ids)
+#'     rap_ids
+#'
+#'     ## restrict the result to identifiers present in another object,
+#'     ## e.g. rownames(obj[["RNA"]]) of a Seurat object
+#'     msu_to_rap(msu_ids, universe=rap_ids[1])
 #' }
 #'
 #' @export
