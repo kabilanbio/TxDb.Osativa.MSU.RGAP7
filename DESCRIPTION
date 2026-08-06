@@ -23,11 +23,13 @@ Depends:
     R (>= 4.5.0)
 Imports:
     AnnotationDbi,
-    GenomicFeatures
+    GenomicFeatures,
+    stats
 Suggests:
     BiocManager,
     BiocStyle,
     knitr,
+    riceidconverter,
     rmarkdown
 VignetteBuilder: knitr
 License: Artistic-2.0
